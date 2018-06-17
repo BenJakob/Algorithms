@@ -17,7 +17,7 @@ Collection of common algorithms implemented in Swift. [Work in Progress]
 - Binary Search
 
 ### Sort:
-- Inserstion Sort
+- Insertion Sort
 
 ### Standard Functions:
 - Filter, Map, Reduce
