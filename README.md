@@ -2,23 +2,23 @@
 
 Collection of common algorithms implemented in Swift. [Work in Progress]
 
-##Content:
+## Content:
 
-###Fun:
+### Fun:
 - FizzBuzz
 - Most Common Element
 - Reverse Every other Word
 
-###Math:
+### Math:
 - Factorial recursiv
 - Fibonacci
 
-###Search:
+### Search:
 - Binary Search
 
-###Sort:
+### Sort:
 - Inserstion Sort
 
-###Standard Functions:
+### Standard Functions:
 - Filter, Map, Reduce
 
