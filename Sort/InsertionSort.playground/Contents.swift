@@ -37,27 +37,26 @@ extension Sequence {
 extension Sequence where Iterator.Element == Int {
     func sort() -> [Int] {
         var array = Array(self)
-        var i = 1
-        var j = 1
         
-        while i < array.count {
-            j = i
-            
+        for i in 1..<array.count {
+            var j = i
             while j > 0 && array[j - 1] > array[j] {
                 array.swapAt(j, j-1)
                 j -= 1
             }
-            
-            i += 1
         }
         return array
     }
 }
 
-let array = (1...100).shuffled()
+let array = (1...300).shuffled()
 print("Unsorted Array:")
 print(array)
 
+let start = Date()
 let sortedArray = array.sort()
+let duration = String(format: "%.3f", start.timeIntervalSinceNow * -1)
+
 print("\nSorted Array:")
 print(sortedArray)
+print("\nDuration: \(duration) Seconds")

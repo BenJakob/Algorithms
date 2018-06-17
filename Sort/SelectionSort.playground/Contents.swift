@@ -38,35 +38,31 @@ extension Sequence where Iterator.Element == Int {
     
     func sort() -> [Int] {
         var array = Array(self)
-        var i = 0
-        var j = 0
-        var minPos = 0
-        var minValue = array[0]
         
-        while i < array.count {
-            j = i + 1
-            minPos = i
-            minValue = array[i]
+        for i in 0..<array.count {
+            var minPos = i
+            var minValue = array[i]
             
-            while j < array.count {
+            for j in i+1..<array.count {
                 if array[j] < minValue {
                     minValue = array[j]
                     minPos = j
                 }
-                j += 1
             }
-            
             array.swapAt(i, minPos)
-            i += 1
         }
         return array
     }
 }
 
-let array = (1...100).shuffled()
+let array = (1...300).shuffled()
 print("Unsorted Array:")
 print(array)
 
+let start = Date()
 let sortedArray = array.sort()
+let duration = String(format: "%.3f", start.timeIntervalSinceNow * -1)
+
 print("\nSorted Array:")
 print(sortedArray)
+print("\nDuration: \(duration) Seconds")

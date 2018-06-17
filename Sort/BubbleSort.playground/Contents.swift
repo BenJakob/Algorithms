@@ -7,7 +7,7 @@
 // Average performance          О(n2) comparisons, О(n2) swaps
 // Worst-case space complexity  O(1), O(1) auxiliary
 //
-// Source: https://en.wikipedia.org/wiki/Insertion_sort
+// Source: https://en.wikipedia.org/wiki/Bubble_sort
 
 import UIKit
 
@@ -37,29 +37,29 @@ extension Sequence {
 extension Sequence where Iterator.Element == Int {
     func sort() -> [Int] {
         var array = Array(self)
-        var i = 0
         var isSwapped = true
         
         while isSwapped {
-            i = 0
             isSwapped = false
-            
-            while i < array.count - 1 {
+            for i in 0..<array.count-1 {
                 if array[i + 1] < array[i] {
                     array.swapAt(i, i + 1)
                     isSwapped = true
                 }
-                i += 1
             }
         }
         return array
     }
 }
 
-let array = (1...100).shuffled()
+let array = (1...300).shuffled()
 print("Unsorted Array:")
 print(array)
 
+let start = Date()
 let sortedArray = array.sort()
+let duration = String(format: "%.3f", start.timeIntervalSinceNow * -1)
+
 print("\nSorted Array:")
 print(sortedArray)
+print("\nDuration: \(duration) Seconds")
