@@ -1,6 +1,5 @@
 // Insertion Sort
-// A simple sorting algorithm that builds the final sorted array (or list) one item at a time.
-// It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
+// A simple sorting algorithm that builds the final sorted array (or list) one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort.
 //
 // Performance:
 // Worst-case performance       О(n^2) comparisons, swaps
@@ -56,7 +55,9 @@ extension Sequence where Iterator.Element == Int {
 }
 
 let array = (1...100).shuffled()
-print("Unsorted Array", array)
+print("Unsorted Array:")
+print(array)
 
 let sortedArray = array.sort()
-print("\nSorted Array", sortedArray)
+print("\nSorted Array:")
+print(sortedArray)
