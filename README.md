@@ -19,6 +19,7 @@ Collection of common algorithms implemented in Swift. [Work in Progress]
 ### Sort:
 - Bubble Sort
 - Insertion Sort
+- Merge Sort
 - Selection Sort
 
 ### Standard Functions:
