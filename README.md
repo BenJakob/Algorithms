@@ -17,6 +17,7 @@ Collection of common algorithms implemented in Swift. [Work in Progress]
 - Binary Search
 
 ### Sort:
+- Bubble Sort
 - Insertion Sort
 - Selection Sort
 
